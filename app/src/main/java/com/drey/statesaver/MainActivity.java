@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         mCounter=savedInstanceState.getInt(KEY_COUNTER);
     }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
 
     public void onClickCounter(View view) {
         mCounter++;
